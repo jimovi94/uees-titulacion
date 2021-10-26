@@ -1,0 +1,137 @@
+[data-controller="index"] {
+  .proj-info-banner {
+    @include fluid-resp(25px, 50px, margin-bottom);
+
+    h2 {
+      @include fluid-resp(24px, 30px, font-size);
+      @include fluid-resp(10px, 15px, margin-bottom);
+      font-weight: 800;
+    }
+
+    h3 {
+      @include fluid-resp(10px, 15px, margin-bottom);
+      @include fluid-resp(16px, 20px, font-size);
+
+      font-weight: 500;
+    }
+
+    h4 {
+      color: $c2;
+      @include fluid-resp(14px, 18px, font-size);
+
+      span {
+        color: $c1;
+        font-weight: normal;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .cent {
+      @include vertical-align(relative);
+    }
+
+    .columns {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .column-lg {
+        @include column(0.7, $cycle:2, $gutter: 3);
+
+        @include breakpoint(sm) {
+          @include column(1, $cycle:1, $gutter: 3);
+        }
+      }
+
+      .column-sm {
+        @include column(0.3, $cycle:2, $gutter: 3);
+
+        @include breakpoint(sm) {
+          @include column(1, $cycle:1, $gutter: 3);
+        }
+      }
+    }
+  }
+
+  .proj-details {
+    @include fluid-resp(25px, 50px, margin-bottom);
+
+    h2 {
+      @include fluid-resp(18px, 22px, font-size);
+      @include fluid-resp(10px, 15px, margin-bottom);
+      font-weight: 800;
+      //color: $c2;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      color: $c2;
+      @include fluid-resp(14px, 18px, font-size);
+
+      span {
+        color: $c1;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .proj-results {
+    @include fluid-resp(25px, 50px, margin-bottom);
+
+    h2 {
+      @include fluid-resp(18px, 22px, font-size);
+      @include fluid-resp(10px, 15px, margin-bottom);
+      font-weight: 800;
+      //color: $c2;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      //@include fluid-resp(10px, 15px, margin-bottom);
+      @include fluid-resp(16px, 20px, font-size);
+
+      font-weight: 500;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .proj-more {
+    h2 {
+      text-align: center;
+      @include fluid-resp(22px, 28px, font-size);
+      @include fluid-resp(5px, 10px, margin-bottom);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .sep {
+      background-color: $c2;
+      @include fluid-resp(80px, 100px, width);
+      height: 5px;
+      @include push-auto();
+    }
+
+    .columns {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .column {
+        @include column(0.5, $cycle:2, $gutter: 3);
+
+        @include breakpoint(sm) {
+          @include column(1, $cycle:1, $gutter: 3);
+        }
+      }
+    }
+  }
+}

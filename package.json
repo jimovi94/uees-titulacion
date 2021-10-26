@@ -1,5 +1,5 @@
 {
-  "name": "persephone",
+  "name": "uees-titulacion",
   "version": "1.0.6",
   "private": true,
   "main": "main.js",
@@ -45,5 +45,14 @@
     "@hotwired/stimulus": "^3.0.0",
     "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "@hotwired/turbo": "^7.0.1"
-  }
+  },
+  "description": "<h1 align=\"center\">Persephone Engine (AKA Persy)</h1>\r <p align=\"center\">Front-end and Lambda for web apps projects (Optimized for Netlify) by Pixavio.</p>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimovi94/uees-titulacion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jimovi94/uees-titulacion/issues"
+  },
+  "homepage": "https://github.com/jimovi94/uees-titulacion#readme"
 }
