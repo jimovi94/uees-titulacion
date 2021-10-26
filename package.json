@@ -1,0 +1,49 @@
+{
+  "name": "persephone",
+  "version": "1.0.6",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "persy:init": "npm init && npm install",
+    "persy:install": "npm install",
+    "persy:link": "netlify link",
+    "persy:dev": "nodemon",
+    "persy:start": "netlify dev",
+    "persy:build": "webpack --config webpack.prod.js",
+    "persy:lambda": "netlify-lambda build ./functions/src"
+  },
+  "keywords": [],
+  "author": "Pixavio",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "css-loader": "^5.2.6",
+    "css-minimizer-webpack-plugin": "^3.0.1",
+    "dotenv-webpack": "^7.0.3",
+    "file-loader": "^6.2.0",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.1",
+    "html-loader": "^2.1.2",
+    "html-webpack-injector": "^1.1.4",
+    "html-webpack-plugin": "^5.3.1",
+    "imagemin-webp-webpack-plugin": "^3.3.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "netlify-cli": "^6.10.2",
+    "netlify-lambda": "^2.0.9",
+    "nodemon": "^2.0.13",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "sass-resources-loader": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.0",
+    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
+    "@hotwired/turbo": "^7.0.1"
+  }
+}

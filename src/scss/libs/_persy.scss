@@ -1,0 +1,174 @@
+@use '../sass:math';
+
+/******** VARS ********/
+//Breakpoint Vars
+$xs: 575px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1200px;
+$xl: 1400px;
+$xxl: 1600px;
+
+//Directory Vars
+$dir-font:"../assets/fonts/";
+$dir-img:"../assets/img/";
+
+/******** END VARS ********/
+
+/******** Inital Configuration ********/
+@mixin initial_conf {
+  html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  //Snipcart Logo paymentez Fix
+  .snipcart-payment-methods-list-item__icon {
+    height: 20px !important;
+  }
+}
+
+@include initial_conf();
+/******** END Inital Configuration ********/
+
+
+/******** Breakpoint ********/
+@mixin breakpoint($class) {
+  @if $class==xs {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+
+  @else if $class==sm {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $class==md {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $class==lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $class==xl {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+
+  @else if $class==xxl {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
+}
+
+/******** END Breakpoint ********/
+
+
+/******** Vertical Align ********/
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+//Cancel vertical Align
+@mixin cancel-vertical-align($position: relative) {
+  position: $position;
+  top: 0;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/******** END Vertical Align ********/
+
+
+/******** Push element center ********/
+@mixin push-auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+/******** END Push element center ********/
+
+/******** Fluid element responsive ********/
+//Unit Calc
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@mixin fluid-resp($min-space, $max-space, $type) {
+  $min-vw: $xs;
+  $max-vw: $xxl;
+  $u1: unit($xs);
+  $u2: unit($xxl);
+  $u3: unit($min-space);
+  $u4: unit($max-space);
+
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+    & {
+      #{$type}: $min-space;
+
+      @media screen and (min-width: $min-vw) {
+        #{$type}: calc(#{$min-space} + #{strip-unit($max-space - $min-space)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        #{$type}: $max-space;
+      }
+    }
+  }
+}
+
+/******** END Fluid element responsive ********/

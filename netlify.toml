@@ -1,0 +1,24 @@
+[build]
+  functions = "functions/dist"
+  publish = "dist"
+  command = "npm run persy:build"
+[dev]
+  functions = "functions/dist"
+  command = "npm run persy:dev"
+  port = 8000
+  functionsPort = 9000
+  targetPort = 8080
+  publish = "dist"
+  framework = "#custom"
+  autoLaunch = true
+[functions]
+  directory = "functions/src"
+  node_bundler = "esbuild"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "max-age=0, must-revalidate, public"

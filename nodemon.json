@@ -1,0 +1,4 @@
+{
+  "watch": ["webpack.common.js", "webpack.dev.js","./src/persy.pages.js"],
+  "exec": "webpack serve --config webpack.dev.js"
+}
