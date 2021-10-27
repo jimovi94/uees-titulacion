@@ -26,9 +26,22 @@ body {
   @include push-auto();
   @include fluid-resp(5px, 10px, margin-top);
   @include fluid-resp(30px, 50px, margin-bottom);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .logo-cont {
     @include fluid-resp(120px, 140px, width);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .icon-cont {
+    @include fluid-resp(20px, 30px, width);
+    cursor: pointer;
 
     img {
       width: 100%;
