@@ -58,6 +58,49 @@
   }
 
   .proj-details {
+
+    .columns {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .column {
+        @include column(0.333, $cycle:3, $gutter: 3);
+
+        @include breakpoint(sm) {
+          @include column(1, $cycle:1, $gutter: 3);
+        }
+      }
+    }
+
+    .card-detail {
+      background-color: #f5f5f7;
+      border-radius: 10px;
+      @include fluid-resp(20px, 50px, margin-bottom);
+      @include fluid-resp(20px, 40px, padding-bottom);
+      @include fluid-resp(20px, 40px, padding-top);
+      @include fluid-resp(25px, 50px, padding-left);
+      @include fluid-resp(25px, 50px, padding-right);
+
+      .title {
+        display: flex;
+        align-items: center;
+        @include fluid-resp(15px, 20px, margin-bottom);
+
+        h3 {
+          text-transform: uppercase;
+          @include fluid-resp(18px, 22px, font-size);
+          @include fluid-resp(10px, 20px, margin-left);
+          font-weight: 800;
+        }
+
+        img {
+          @include fluid-resp(20px, 35px, width);
+          height: auto;
+        }
+      }
+    }
+
     @include fluid-resp(25px, 50px, margin-bottom);
 
     h2 {
