@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap');
+
 $c1:#2F281E;
 $c2:#810C33;
+$c3:#4B4B4C;
 
 body {
-  font-family: 'Montserrat';
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
   color: $c1;
   background: #ffffff;
@@ -15,7 +18,7 @@ body {
 }
 
 [data-controller] {
-  max-width: $xxl;
+  max-width: $xl;
   width: calc(100% / 1.1);
   @include push-auto();
 }
