@@ -14,13 +14,23 @@
 
   <div data-controller="index">
     <div class="banner-cont">
-      <div class="img-banner"></div>
+      {{!--  <div class="img-banner"></div> --}}
       <div class="text-cont">
-        <p>ODS9</p>
-        <p>Industria, innovación e infraestructura</p>
-        <h2>Diseño arquitectónico de espacios emergentes
-          para la supervivencia y bienestar en sectores
-          vulnerables de la Provincia del Guayas</h2>
+        {{!-- <p>ODS9</p>
+        <p>Industria, innovación e infraestructura</p> --}}
+        <div class="columns">
+          <div class="column-sm">
+            <img src="/img/ODS (9).png" alt="ODS 9">
+          </div>
+          <div class="column-lg">
+            <div class="cent">
+              <h2>Diseño arquitectónico de espacios emergentes
+                para la supervivencia y bienestar en sectores
+                vulnerables de la Provincia del Guayas</h2>
+              <h3>Facultad de Arquitectura y Diseño</h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="desc-cont">
@@ -63,7 +73,7 @@
     </div>
   </div>
 
-  {{> ../layouts/footer}}
+  {{!--  {{> ../layouts/footer}} --}}
 
 </body>
 

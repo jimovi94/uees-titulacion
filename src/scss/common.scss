@@ -34,7 +34,7 @@ body {
   justify-content: space-between;
 
   .logo-cont {
-    @include fluid-resp(120px, 140px, width);
+    @include fluid-resp(130px, 160px, width);
 
     img {
       width: 100%;
