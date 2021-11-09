@@ -119,8 +119,8 @@ body {
   border-right: 1px solid rgba(0, 0, 0, 0.03);
   text-align: center;
   position: relative;
-  color: $c1;
-  pointer-events: none;
+  color: $c3;
+  user-select: none;
 }
 
 .range-calendar .calendar .cell .day-number {
@@ -234,7 +234,7 @@ body {
   margin: 0px 0;
   text-align: center;
   position: relative;
-  color: $c1;
+  color: $c3;
   border-right: 0px solid rgba(0, 0, 0, 0.03);
   position: relative;
 }
