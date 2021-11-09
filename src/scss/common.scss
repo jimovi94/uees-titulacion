@@ -169,12 +169,6 @@ body {
   color: #888;
 }
 
-.range-calendar .calendar .cell:hover .day-number {}
-
-.range-calendar .calendar .cell:hover .day {}
-
-.range-calendar .calendar .cell:hover .month {}
-
 .range-calendar .calendar .cell.selected {
   background: transparent;
   color: #fff;
@@ -499,8 +493,6 @@ body {
 .cyano-theme .months .cell.selected {
   background-color: #00CCFF;
 }
-
-.cyano-theme .months .cell.selected .month-name {}
 
 .cyano-theme .calendar {
   background-color: transparent;
