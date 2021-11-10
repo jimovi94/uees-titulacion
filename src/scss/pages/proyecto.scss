@@ -6,21 +6,6 @@
     //height: 40vh;
     @include fluid-resp(60px, 100px, margin-bottom);
 
-    /*  .img-banner {
-      background-image: url($dir-img+"banner-img.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      width: calc(100% / 1.15);
-      height: 100%;
-      position: absolute;
-      top: 0;
-      z-index: -1;
-      left: 0;
-      right: 0;
-      @include push-auto();
-    } */
-
     .text-cont {
 
       //@include vertical-align();

@@ -5,12 +5,16 @@ export default class extends Controller {
     }).then(function (entries) {
       $("#index-proyectos").html("");
       entries.items.forEach(function (entry) {
-        $("#index-proyectos").append(` 
-        <div class="item">
-          <a href="./proyecto/${entry.fields.slug}">
-          <p>${entry.fields.nombreDelPv}</p>
+        $("#index-proyectos").append(`
+        <div class="column">
+        <a href="./proyecto/${entry.fields.slug}">
+          <div class="item">
+              <h3>${entry.fields.nombreDelPv}</h3>
+              <p>${entry.fields.facultad}</p>
+          </div>
           </a>
-        </div>`);
+        </div>
+        `);
       });
     }).catch(err => {
       //console.log(err)

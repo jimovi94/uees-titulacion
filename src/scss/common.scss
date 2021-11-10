@@ -28,14 +28,14 @@ body {
   max-width: $xxl;
   width: calc(100% / 1.1);
   @include push-auto();
-  @include fluid-resp(5px, 10px, margin-top);
-  @include fluid-resp(5px, 50px, margin-bottom);
+  @include fluid-resp(15px, 25px, margin-top);
+  @include fluid-resp(30px, 60px, margin-bottom);
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   .logo-cont {
-    @include fluid-resp(115px, 160px, width);
+    @include fluid-resp(110px, 135px, width);
 
     img {
       width: 100%;
@@ -62,7 +62,7 @@ body {
   @include fluid-resp(30px, 35px, padding-bottom);
 
   .copy {
-    max-width: $lg;
+    max-width: $xxl;
     width: calc(100% / 1.1);
     @include push-auto();
     display: flex;
