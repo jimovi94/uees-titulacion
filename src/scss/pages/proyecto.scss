@@ -4,7 +4,7 @@
     max-width: $md;
     @include push-auto();
     //height: 40vh;
-    @include fluid-resp(40px, 100px, margin-bottom);
+    @include fluid-resp(60px, 100px, margin-bottom);
 
     /*  .img-banner {
       background-image: url($dir-img+"banner-img.jpg");
@@ -31,10 +31,26 @@
 
         .column-sm {
           @include column(0.2, $cycle:2, $gutter: 3);
+
+          @include breakpoint(sm) {
+            @include column(0.3, $cycle:2, $gutter: 3);
+          }
+
+          @include breakpoint(xs) {
+            @include column(1, $cycle:1, $gutter: 3);
+          }
         }
 
         .column-lg {
           @include column(0.8, $cycle:2, $gutter: 3);
+
+          @include breakpoint(sm) {
+            @include column(0.7, $cycle:2, $gutter: 3);
+          }
+
+          @include breakpoint(xs) {
+            @include column(1, $cycle:1, $gutter: 3);
+          }
         }
       }
 
@@ -43,15 +59,22 @@
       }
 
       img {
+
         width: 100%;
         height: auto;
+
+        @include breakpoint(sm) {
+          max-width: 240px;
+          display: table;
+          @include push-auto();
+        }
       }
 
       p {
         //text-align: center;
         font-style: italic;
         font-weight: 600;
-        @include fluid-resp(16px, 20px, font-size);
+        @include fluid-resp(14px, 20px, font-size);
       }
 
       h2 {
@@ -59,7 +82,7 @@
         //text-align: center;
         color: $c2;
         font-weight: 900;
-        @include fluid-resp(24px, 30px, font-size);
+        @include fluid-resp(22px, 30px, font-size);
         @include fluid-resp(5px, 10px, margin-bottom);
         line-height: 1;
       }
@@ -77,7 +100,7 @@
   .desc-cont {
     max-width: $lg;
     @include push-auto();
-    @include fluid-resp(90px, 150px, margin-bottom);
+    @include fluid-resp(60px, 100px, margin-bottom);
 
     .cent {
       @include vertical-align();
@@ -87,7 +110,7 @@
       h3 {
         color: $c2;
         font-weight: 700;
-        @include fluid-resp(22px, 26px, font-size);
+        @include fluid-resp(20px, 26px, font-size);
         @include fluid-resp(10px, 15px, margin-bottom);
         text-transform: uppercase;
       }
@@ -119,7 +142,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        @include fluid-resp(15px, 20px, margin-bottom);
+        @include fluid-resp(5px, 20px, margin-bottom);
 
         img {
           @include fluid-resp(35px, 45px, width);
@@ -129,7 +152,7 @@
         h3 {
           color: $c2;
           font-weight: 700;
-          @include fluid-resp(26px, 30px, font-size);
+          @include fluid-resp(24px, 30px, font-size);
           @include fluid-resp(5px, 10px, margin-left);
           text-transform: uppercase;
         }
@@ -144,14 +167,14 @@
           text-align: center;
           text-transform: uppercase;
           color: $c3;
-          @include fluid-resp(20px, 22px, font-size);
+          @include fluid-resp(16px, 22px, font-size);
         }
 
         p {
           text-align: center;
           color: $c2;
           font-weight: 700;
-          @include fluid-resp(18px, 22px, font-size);
+          @include fluid-resp(16px, 22px, font-size);
         }
 
         img {
@@ -162,17 +185,21 @@
         .persona {
           display: table;
           @include push-auto();
-          @include fluid-resp(35px, 45px, width);
+          @include fluid-resp(32px, 45px, width);
         }
 
         .dinero {
           display: table;
           @include push-auto();
-          @include fluid-resp(45px, 55px, width);
+          @include fluid-resp(40px, 55px, width);
         }
 
         .column {
           @include column(0.5, $cycle:2, $gutter: 2);
+
+          /*  @include breakpoint(xs) {
+            @include column(1, $cycle:1, $gutter: 2);
+          } */
         }
       }
 
@@ -195,6 +222,12 @@
 
       .column {
         @include column(0.5, $cycle:2, $gutter: 3);
+
+
+        @include breakpoint(sm) {
+          @include fluid-resp(20px, 25px, margin-top);
+          @include column(1, $cycle:1, $gutter: 2);
+        }
       }
     }
   }
@@ -203,13 +236,13 @@
     max-width: $md;
     width: 100%;
     @include push-auto();
-    @include fluid-resp(90px, 150px, margin-bottom);
+    @include fluid-resp(60px, 100px, margin-bottom);
 
     h3 {
       text-align: center;
       color: $c2;
       font-weight: 700;
-      @include fluid-resp(26px, 30px, font-size);
+      @include fluid-resp(22px, 30px, font-size);
       @include fluid-resp(8px, 10px, margin-bottom);
     }
 
@@ -217,7 +250,7 @@
       color: $c3;
       text-align: center;
       font-weight: 500;
-      @include fluid-resp(18px, 20px, font-size);
+      @include fluid-resp(16px, 20px, font-size);
     }
   }
 
@@ -225,7 +258,7 @@
     max-width: $md;
     width: 100%;
     @include push-auto();
-    @include fluid-resp(90px, 150px, margin-bottom);
+    @include fluid-resp(60px, 100px, margin-bottom);
 
     .title-icon {
       display: flex;
@@ -234,14 +267,14 @@
       @include fluid-resp(8px, 15px, margin-bottom);
 
       img {
-        @include fluid-resp(30px, 40px, width);
+        @include fluid-resp(25px, 40px, width);
         height: auto;
       }
 
       h3 {
         color: $c2;
         font-weight: 700;
-        @include fluid-resp(26px, 30px, font-size);
+        @include fluid-resp(22px, 30px, font-size);
         @include fluid-resp(5px, 10px, margin-left);
         text-transform: uppercase;
       }
@@ -259,7 +292,7 @@
         font-weight: 700;
         text-align: center;
         text-transform: uppercase;
-        @include fluid-resp(18px, 20px, font-size);
+        @include fluid-resp(16px, 20px, font-size);
       }
 
       p {
@@ -270,7 +303,7 @@
         color: $c3;
         font-weight: 900;
         line-height: 1;
-        @include fluid-resp(28px, 32px, font-size);
+        @include fluid-resp(24px, 32px, font-size);
         @include fluid-resp(5px, 5px, margin-top);
         @include fluid-resp(8px, 10px, margin-bottom);
       }
