@@ -10,7 +10,6 @@ export default class extends Controller {
       select: 'fields',
       'fields.slug': proj_slug.replace("#", ""),
     }).then(function (entries) {
-      console.log(entries);
 
       $("#banner-cont").html(`
       <div class="text-cont">
@@ -36,7 +35,7 @@ export default class extends Controller {
               <h3>Actividades realizadas:</h3>
             </div>
             <div class="text-cont">
-              ${entries.items[0].fields.actividadesRealizadas}
+              <p>${replaceAll(entries.items[0].fields.actividadesRealizadas, "\n", "<br>")}</p>
             </div>
           </div>
         </div>
@@ -114,5 +113,9 @@ export default class extends Controller {
     }).catch(err => {
       window.location.replace("/");
     });
+
+    function replaceAll(string, search, replace) {
+      return string.split(search).join(replace);
+    }
   }
 }
