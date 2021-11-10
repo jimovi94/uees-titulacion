@@ -22,3 +22,14 @@
     Referrer-Policy = "no-referrer"
     X-Content-Type-Options = "nosniff"
     Cache-Control = "max-age=0, must-revalidate, public"
+
+[[redirects]]
+  from = "/proyecto/:slug"
+  to = "/proyecto"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/proyecto"
+  to = "/proyecto"
+  status = 302
+  force = true

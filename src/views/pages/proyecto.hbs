@@ -17,13 +17,30 @@
   {{> ../layouts/load}}
   {{> ../layouts/menu}}
 
-  <div data-controller="index">
-    <div id="index-proyectos">
+  <div data-controller="proyecto">
+    <div class="banner-cont" id="banner-cont">
 
     </div>
+    <div class="desc-cont" id="desc-cont">
+
+    </div>
+    <div class="results-cont" id="results-cont">
+
+    </div>
+    <div class="calendar-cont">
+      <div class="title-icon">
+        <img src="/img/calendar.svg" alt="Resultados">
+        <h3>Periodo de ejecución</h3>
+      </div>
+      <div id="range-calendar"></div>
+      <div class="columns" id="time-stats">
+
+      </div>
+    </div>
+
   </div>
 
-  {{!-- {{> ../layouts/footer}} --}}
+  {{> ../layouts/footer}}
 
 </body>
 

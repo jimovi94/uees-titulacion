@@ -13,9 +13,23 @@ import {
 import {
   definitionsFromContext
 } from "@hotwired/stimulus-webpack-helpers"
+import * as contentful from 'contentful';
+
+//Contentful Start
+const contentful_api = contentful.createClient({
+  space: "y7rw7fvhkjr5",
+  accessToken: "lUK0cdpOtKl9MiCKXGoAin0KJ638-kdgyuxAdJpp4DY"
+});
+const contentful_preview_api = contentful.createClient({
+  space: "y7rw7fvhkjr5",
+  accessToken: "y5u-TP5lhqTBWtj4dXfgH4GvyEEjhdPmY5iw3VyaKgM",
+  host: "preview.contentful.com"
+});
 
 //Window Import
 window.Controller = Controller;
+window.contentful_api = contentful_api;
+window.contentful_preview_api = contentful_preview_api;
 
 
 //Init Turbo & Stimullus
@@ -25,24 +39,7 @@ const context = require.context("./controllers", true, /\.js$/);
 Stimulus.load(definitionsFromContext(context));
 
 document.addEventListener("turbo:load", function () {
-  var simpleRangeCalendar = $("#range-calendar").rangeCalendar({
-    lang: "es",
-    theme: "default-theme",
-    themeContext: this,
-    startDate: moment(),
-    endDate: moment().add('months', 12),
-    start: "+7",
-    startRangeWidth: 90,
-    minRangeWidth: 1,
-    maxRangeWidth: 120,
-    weekends: true,
-    autoHideMonths: false,
-    visible: true,
-    trigger: null,
-    changeRangeCallback: function (el, cont, dateProp) {
-      return false;
-    }
-  });
+
 });
 
 (function ($, window, undefined) {
@@ -179,7 +176,7 @@ document.addEventListener("turbo:load", function () {
 
         obj.update = function () {
 
-          console.log("update");
+
           moment.lang(obj.lang);
           obj.setTheme(obj.theme);
           obj._generateView();
