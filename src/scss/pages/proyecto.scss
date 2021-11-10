@@ -214,10 +214,10 @@
     }
 
     h4 {
-      text-align: center;
       color: $c3;
-      font-weight: 700;
-      @include fluid-resp(24px, 28px, font-size);
+      text-align: center;
+      font-weight: 500;
+      @include fluid-resp(18px, 20px, font-size);
     }
   }
 
